@@ -17,3 +17,6 @@ export function exercise01(args) {
   return result.join("")
 }
 
+export function exercise02(args){
+  return args.toUpperCase()
+}
