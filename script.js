@@ -50,3 +50,22 @@ export function exercise04(args) {
 
   return result + 1;
 }
+
+export function exercise05(args) {
+  const input = args;
+  // Initialize the result as false -> when there are no capital letters 
+  let result = false;
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i];
+    const asciiValue = currentElement.charCodeAt(0);
+
+    // Check if the ASCII value corresponds to a capital letter (between 65 and 90) -> search in the ASCII chart
+    if (asciiValue >= 65 && asciiValue <= 90) {
+      result = true;
+      break;
+    }
+  }
+
+  return result;
+}
