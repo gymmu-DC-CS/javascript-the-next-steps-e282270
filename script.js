@@ -69,3 +69,23 @@ export function exercise05(args) {
 
   return result;
 }
+
+
+export function exercise06(args) {
+  const input = args;
+  let result = true;
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i];
+    const asciiValue = currentElement.charCodeAt(0);
+
+  
+    if (asciiValue >= 41 && asciiValue <= 100) {
+      result = false;
+      break;
+    }
+  }
+
+  return result;
+}
+
