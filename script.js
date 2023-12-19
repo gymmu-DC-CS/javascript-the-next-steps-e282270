@@ -103,3 +103,23 @@ export function exercise07(args) {
   }
   return false
 }
+
+export function exercise08(args) {
+  const input = args
+  let result = ""
+
+  // Similar code like in exercise01
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === "e") {
+      // Replace 'e' with '3'
+      result += "3"
+    } else {
+      // Keep other characters unchanged
+      result += currentElement
+    }
+  }
+
+  return result
+}
