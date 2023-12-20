@@ -164,3 +164,20 @@ export function exercise10(args) {
   // Return false if the conditions are not met
   return false
 }
+
+export function exercise11(input) {
+  // Check if input is a string and has a length of exactly 1 character
+  if (typeof input !== "string" || input.length !== 1) {
+    // Return null for invalid input
+    return null
+  }
+
+  // Extract the single character from the input string
+  const char = input[0]
+
+  // Get the ASCII value of the character
+  const asciiValue = char.charCodeAt(0)
+
+  // Return the ASCII value
+  return asciiValue
+}
