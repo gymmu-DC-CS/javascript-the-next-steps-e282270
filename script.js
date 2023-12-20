@@ -123,3 +123,25 @@ export function exercise08(args) {
 
   return result
 }
+
+export function exercise09(args) {
+  const input = args
+
+  // input.length=checks that the input is exactly 6 characters long
+  if (input.length === 6) {
+    for (let i = 0; i < input.length; i++) {
+      const asciiValue = input[i].charCodeAt()
+
+      if (asciiValue < 32 || asciiValue > 127) {
+        // If a character is not in the valid ASCII range (32-127), return false
+        return false
+      }
+    }
+
+    // If all characters are within the valid ASCII range, return true
+    return true
+  }
+
+  // If the input length is not 6, return false
+  return false
+}
