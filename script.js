@@ -145,3 +145,22 @@ export function exercise09(args) {
   // If the input length is not 6, return false
   return false
 }
+
+export function exercise10(args) {
+  // Extract input from arguments
+  const input = args
+
+  // RGB Hex Code is 7 characters long, for example #ffffff
+  // Check if the input length is 7 and the first character is '#' and the rest are valid hexadecimal characters
+  if (
+    input.length === 7 &&
+    input[0] === "#" &&
+    /^[0-9a-fA-F]+$/.test(input.slice(1))
+  ) {
+    // Return true if the conditions are met
+    return true
+  }
+
+  // Return false if the conditions are not met
+  return false
+}
