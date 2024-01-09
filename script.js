@@ -155,6 +155,7 @@ export function exercise10(args) {
   if (
     input.length === 7 &&
     input[0] === "#" &&
+    // number below found on: 20/12/2023 on website: https://stackoverflow.com/questions/9221362/regular-expression-for-a-hexadecimal-number
     /^[0-9a-fA-F]+$/.test(input.slice(1))
   ) {
     // Return true if the conditions are met
@@ -165,19 +166,31 @@ export function exercise10(args) {
   return false
 }
 
-export function exercise11(input) {
-  // Check if input is a string and has a length of exactly 1 character
-  if (typeof input !== "string" || input.length !== 1) {
-    // Return null for invalid input
+export function exercise11(args) {
+  // Check if args is a string and has a length of exactly 1 character
+  if (typeof args !== "string" || args.length !== 1) {
+    // Return null for invalid args
     return null
   }
 
-  // Extract the single character from the input string
-  const char = input[0]
+  // Extract the single character from the args string
+  const char = args[0]
 
   // Get the ASCII value of the character
   const asciiValue = char.charCodeAt(0)
 
   // Return the ASCII value
   return asciiValue
+}
+
+export function exercise12(args) {
+  const input = args
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement == "e") {
+      return i // returns the current check position "i" if it is an 'e'
+    }
+  }
 }
