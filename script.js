@@ -193,4 +193,5 @@ export function exercise12(args) {
       return i // returns the current check position "i" if it is an 'e'
     }
   }
+  return -1
 }
