@@ -195,3 +195,32 @@ export function exercise12(args) {
   }
   return -1
 }
+
+export function exercise13(args) {
+  const input = args
+  let latestE = -1 // variable to store the last found 'e,' initialized to -1 to avoid showing the 0th index as a solution in texts without 'e'
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement == "e") {
+      latestE = i // stores the last found 'e' in the variable
+    }
+  }
+  return latestE
+}
+
+export function exercise14(args) {
+  const input = args
+  let count = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement == "e") {
+      count++
+      if (count === 3) return i // returns the current check position (i) as soon as the counter reaches 3
+    }
+  }
+  if (count == input.length) return 2 // if the counter matches the input length (indicating only 'e's), returns 2
+  if (count < 3) return -1 // if the counter is less than 3, returns -1 (not enough 'e's for there to be 3)
+}
