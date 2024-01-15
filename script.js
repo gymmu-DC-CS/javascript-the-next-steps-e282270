@@ -2,6 +2,7 @@ export function exercise01(args) {
   const input = args
   const result = []
 
+  // Code found on www.w3schools.com on date 21/11/23 link: https://www.w3schools.com/js/js_loop_for.asp
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === "e" || currentElement === "E") {
@@ -10,7 +11,7 @@ export function exercise01(args) {
       result.push(currentElement)
     }
   }
-
+  // Join the elements in the result array into a single string and return it
   return result.join("")
 }
 
@@ -25,10 +26,10 @@ export function exercise03(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === "e" || currentElement === "E") {
+      // If true, increment the result counter
       result++
     }
   }
-
   return result
 }
 
@@ -39,11 +40,12 @@ export function exercise04(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     // Check if the current character is a space and not followed by a dash
+    // Code found on www.w3schools.com on date 05/12/23 link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND
     if (currentElement === " " && input[i + 1] !== "-") {
       result++
     }
   }
-
+  // Return the final count of spaces not followed by a dash, plus 1 -> the last word does not have a space
   return result + 1
 }
 
@@ -57,6 +59,7 @@ export function exercise05(args) {
     const asciiValue = currentElement.charCodeAt(0)
 
     // Check if the ASCII value corresponds to a capital letter (between 65 and 90) -> search in the ASCII chart
+    // Ascii table: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/ASCII-Table.svg/2522px-ASCII-Table.svg.png
     if (asciiValue >= 65 && asciiValue <= 90) {
       result = true
       break
@@ -73,7 +76,7 @@ export function exercise06(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     const asciiValue = currentElement.charCodeAt(0)
-
+    // Check if the ASCII value corresponds to a special character
     if (
       (asciiValue >= 33 && asciiValue <= 64) ||
       (asciiValue >= 91 && asciiValue <= 69)
@@ -82,18 +85,17 @@ export function exercise06(args) {
       break
     }
   }
-
   return result
 }
 
 export function exercise07(args) {
   const input = args
-
+  // Get the ASCII values of the current character and the next two characters.
   for (let i = 0; i < input.length - 2; i++) {
     const firstLetter = input[i].charCodeAt()
     const secondLetter = input[i + 1].charCodeAt()
     const thirdLetter = input[i + 2].charCodeAt()
-
+    // Check if the sequence corresponds to 'and' (case-insensitive)
     if (
       firstLetter === 97 ||
       (firstLetter === 65 && secondLetter === 110 && thirdLetter === 100)
@@ -137,11 +139,9 @@ export function exercise09(args) {
         return false
       }
     }
-
     // If all characters are within the valid ASCII range, return true
     return true
   }
-
   // If the input length is not 6, return false
   return false
 }
