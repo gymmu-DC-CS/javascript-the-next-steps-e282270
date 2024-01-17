@@ -59,7 +59,7 @@ export function exercise05(args) {
     const asciiValue = currentElement.charCodeAt(0)
 
     // Check if the ASCII value corresponds to a capital letter (between 65 and 90) -> search in the ASCII chart
-    // Ascii table: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/ASCII-Table.svg/2522px-ASCII-Table.svg.png
+    // ASCII table: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/ASCII-Table.svg/2522px-ASCII-Table.svg.png
     if (asciiValue >= 65 && asciiValue <= 90) {
       result = true
       break
@@ -223,4 +223,34 @@ export function exercise14(args) {
   }
   if (count == input.length) return 2 // if the counter matches the input length (indicating only 'e's), returns 2
   if (count < 3) return -1 // if the counter is less than 3, returns -1 (not enough 'e's for there to be 3)
+}
+
+export function exercise15(args) {
+  const input = args
+  const result = []
+
+  // Check if the last character in the input is a space
+  if (input.lastIndexOf(" ") == input.length - 1) {
+    // Iterate through the input, excluding the last character (which is a space)
+    for (let i = 0; i < input.length - 1; i++) {
+      const currentElement = input[i]
+      result.push(currentElement)
+    }
+  } else {
+    // Iterate through the input
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+
+      // If the current element is not a space, add it to the result array
+      if (currentElement !== " ") {
+        result.push(currentElement)
+      } else {
+        // If a space is encountered, return the result joined into a string
+        return result.join("")
+      }
+    }
+  }
+
+  // Join the result array into a string and return it
+  return result.join("")
 }
