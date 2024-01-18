@@ -1,3 +1,5 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Sx61bll0)
+
 # Easycode
 
 Simple repository to learn JavaScript.
@@ -20,11 +22,13 @@ Count all words in a text.
 
 ## Exercise 05
 
-Write a function that tests whether at least one capital letter appears in a text.
+Write a function that tests whether at least one capital letter appears in a
+text.
 
 ## Exercise 06
 
-Write a function that tests whether at least one special character appears in a text.
+Write a function that tests whether at least one special character appears in a
+text.
 
 ## Exercise 07
 
@@ -64,7 +68,8 @@ Read the input only up to the first space.
 
 ## Exercise 16
 
-Read the input as a list, with the first part separated by a '$' character, and the rest as the second part.
+Read the input as a list, with the first part separated by a '$' character, and
+the rest as the second part.
 
 ## Exercise 17
 
@@ -72,7 +77,8 @@ Read the input as a list, with entries separated by a ','.
 
 ## Exercise 18
 
-Write the following output: "Your name is `name` and you are `age` years old." where `name` and `age` are replaced by inputs.
+Write the following output: "Your name is `name` and you are `age` years old."
+where `name` and `age` are replaced by inputs.
 
 ## Exercise 19
 
@@ -88,11 +94,12 @@ Reverse the input.
 
 ## Exercise 22
 
-Replace all characters in the input with '_' until the first 'k'.
+Replace all characters in the input with '\_' until the first 'k'.
 
 ## Exercise 23
 
-The first character of the input should also be appended to the beginning and end of the output.
+The first character of the input should also be appended to the beginning and
+end of the output.
 
 ## Exercise 24
 
@@ -100,11 +107,13 @@ Swap the first and last characters of the input.
 
 ## Exercise 25
 
-Delete the middle character of the input. If the number of characters is even, delete the two middle characters.
+Delete the middle character of the input. If the number of characters is even,
+delete the two middle characters.
 
 ## Exercise 26
 
-Compare the first two characters of the input and swap them so that they are sorted alphabetically.
+Compare the first two characters of the input and swap them so that they are
+sorted alphabetically.
 
 ## Exercise 27
 
@@ -112,4 +121,5 @@ Test whether an input is a number.
 
 ## Exercise 28
 
-Test whether there are two numbers separated by a space in the input. If so, output the sum; otherwise, display an error message.
+Test whether there are two numbers separated by a space in the input. If so,
+output the sum; otherwise, display an error message.
