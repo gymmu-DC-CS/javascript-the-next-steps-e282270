@@ -254,3 +254,16 @@ export function exercise15(args) {
   // Join the result array into a string and return it
   return result.join("")
 }
+
+export function exercise20(args) {
+  const input = args
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement == "." && input[i + 1] !== " ")
+      return false // returns false if the current element is '.' and the next element isn't a space
+    else if (currentElement == "." && input[i + 1] == " ") return true // returns true if the current element is '.' and the next element is a space
+  }
+
+  return false
+}
